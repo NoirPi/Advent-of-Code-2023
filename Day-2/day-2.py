@@ -45,12 +45,24 @@ def part_1(games):
     print("part 1:", total)
 
 
+def part_2(games):
+    total = 0
+    for i, game in enumerate(games):
+        minimum = create_rgb(0, 0, 0)
+        for gameset in game:
+            max_rgb(minimum, gameset)
+
+        total += power(minimum)
+    print("part 2:", total)
+
+
 def main():
     games = []  # look at index+1 to get the game's id
     with open("input.txt", "r") as f:
         for line in f:
             games.append(parse_line(line))
     part_1(games)
+    part_2(games)
 
 
 if __name__ == "__main__":
