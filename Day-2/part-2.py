@@ -2,10 +2,6 @@ def create_rgb(r, g, b):
     return {"r": r, "g": g, "b": b}
 
 
-def leq(rgb, other):
-    return rgb["r"] <= other["r"] and rgb["g"] <= other["g"] and rgb["b"] <= other["b"]
-
-
 def power(rgb):
     return rgb["r"] * rgb["g"] * rgb["b"]
 
@@ -35,16 +31,6 @@ def parse_line(line):
     return result
 
 
-def part_1(games):
-    limit = create_rgb(12, 13, 14)
-    total = 0
-    for i, game in enumerate(games):
-        fits = all(leq(gameset, limit) for gameset in game)
-        if fits:
-            total += i + 1
-    print("part 1:", total)
-
-
 def part_2(games):
     total = 0
     for i, game in enumerate(games):
@@ -57,11 +43,10 @@ def part_2(games):
 
 
 def main():
-    games = []  # look at index+1 to get the game's id
+    games = []
     with open("input.txt", "r") as f:
         for line in f:
             games.append(parse_line(line))
-    part_1(games)
     part_2(games)
 
 
