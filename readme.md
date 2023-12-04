@@ -21,6 +21,8 @@ reference or inspiration for your own solutions.
 
 - [Day 1](Day-1): [Part 1](Day-1/part-1.py) | [Part 2](Day-1/part-2.py)
 - [Day 2](Day-2): [Part 1](Day-2/part-1.py) | [Part 2](Day-2/part-2.py)
+- [Day 3](Day-3): [Part 1](Day-3/part-1.py) | [Part 2](Day-3/part-2.py)
+- [Day 4](Day-4): [Part 1](Day-4/part-1.py) | [Part 2](Day-4/part-2.py)
 
 ## How to Use
 
